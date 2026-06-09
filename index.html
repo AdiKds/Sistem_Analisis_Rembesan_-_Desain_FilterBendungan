@@ -52,7 +52,7 @@
             --accent-red: #b91c1c;
         }
 
-        /* Navigasi Kiri Sesuai Sampel Gambar (Satu Baris Tidak Terpotong) */
+        /* Navigasi Kiri (Satu Baris Tidak Terpotong di Desktop) */
         .sidebar-link {
             display: flex;
             align-items: center;
@@ -83,17 +83,17 @@
 
     <div class="h-2 w-full bg-gradient-to-r from-cyan-500 via-amber-500 to-fuchsia-500 shadow-[0_0_25px_rgba(6,182,212,0.9)] z-50"></div>
 
-    <header class="border-b-2 border-[var(--border-color)] bg-slate-950/90 backdrop-blur-md sticky top-0 z-40 px-6 py-4 flex flex-col gap-4">
+    <header class="border-b-2 border-[var(--border-color)] bg-slate-950/90 backdrop-blur-md sticky top-0 z-40 px-4 sm:px-6 py-4 flex flex-col gap-4">
         <div class="max-w-7xl w-full mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 border-b border-slate-800 pb-3">
-            <div class="flex items-center gap-4 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left w-full justify-start">
                 <div class="bg-gradient-to-br from-cyan-600 to-blue-600 text-white px-4 py-2 rounded-bl-xl rounded-tr-xl font-black text-md tracking-wider cyber-font shadow-[0_0_20px_rgba(6,182,212,0.5)]">
                     DAM-GEOTECH
                 </div>
                 <div>
-                    <h1 class="text-xl font-black tracking-widest cyber-font text-white leading-tight uppercase">
+                    <h1 class="text-lg sm:text-xl font-black tracking-widest cyber-font text-white leading-tight uppercase">
                         Sistem Analisis Rembesan &amp; Desain Filter Bendungan
                     </h1>
-                    <p class="text-xs text-cyan-400 font-mono tracking-wider font-bold mt-0.5">LOG RUNTIME: PHASE 4 // CONTROLLING WATER FLOW - PREVENTING PIPING // Kudus, Central Java</p>
+                    <p class="text-[10px] sm:text-xs text-cyan-400 font-mono tracking-wider font-bold mt-0.5 break-all sm:break-normal">LOG RUNTIME: PHASE 4 // CONTROLLING WATER FLOW // Kudus, Central Java</p>
                 </div>
             </div>
         </div>
@@ -102,24 +102,24 @@
             <div class="w-full md:w-1/4 hidden md:block"></div>
 
             <div class="w-full md:w-2/4 flex justify-center">
-                <div class="bg-slate-950/95 border-2 border-slate-800 rounded-2xl px-10 py-2.5 text-center shadow-[inset_0_0_15px_rgba(6,182,212,0.2)] min-w-[280px]">
-                    <div id="dashDate" class="text-xs font-bold uppercase tracking-widest text-slate-400 cyber-font mb-0.5">SELASA, 09 JUN 2026</div>
-                    <div class="flex items-center justify-center gap-2.5 text-cyan-400 font-bold text-2xl cyber-font tracking-wider">
-                        <i class="fa-solid fa-clock text-base animate-pulse"></i>
+                <div class="bg-slate-950/95 border-2 border-slate-800 rounded-2xl px-6 sm:px-10 py-2 text-center shadow-[inset_0_0_15px_rgba(6,182,212,0.2)] min-w-[260px] sm:min-w-[280px]">
+                    <div id="dashDate" class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-slate-400 cyber-font mb-0.5">SELASA, 09 JUN 2026</div>
+                    <div class="flex items-center justify-center gap-2 text-cyan-400 font-bold text-xl sm:text-2xl cyber-font tracking-wider">
+                        <i class="fa-solid fa-clock text-sm sm:text-base animate-pulse"></i>
                         <span id="dashTime">00:00:00</span>
-                        <span class="text-xs text-slate-500 font-mono ml-0.5 font-bold">WITA</span>
+                        <span class="text-[10px] sm:text-xs text-slate-500 font-mono ml-0.5 font-bold">WITA</span>
                     </div>
                 </div>
             </div>
 
             <div class="flex items-center gap-2 w-full md:w-2/4 justify-center md:justify-end flex-wrap sm:flex-nowrap">
-                <button type="button" onclick="openHelpModal()" class="bg-slate-900 border-2 border-emerald-500 text-xs font-mono font-bold px-3 py-2.5 rounded-xl text-emerald-400 hover:bg-emerald-950/40 flex items-center gap-1.5 shadow-md">
-                    <i class="fa-solid fa-circle-question text-sm"></i> <span class="tracking-wide text-sm">HELP SYSTEM</span>
+                <button type="button" onclick="openHelpModal()" class="flex-1 sm:flex-none bg-slate-900 border-2 border-emerald-500 text-xs font-mono font-bold px-3 py-2.5 rounded-xl text-emerald-400 hover:bg-emerald-950/40 flex items-center justify-center gap-1.5 shadow-md min-w-[120px]">
+                    <i class="fa-solid fa-circle-question text-sm"></i> <span class="tracking-wide text-xs sm:text-sm">HELP SYSTEM</span>
                 </button>
-                <button type="button" onclick="openCreatorModal()" class="bg-gradient-to-r from-fuchsia-800 to-pink-700 text-white text-xs font-mono font-bold px-3 py-2.5 rounded-xl flex items-center gap-1.5 hover:from-fuchsia-700 hover:to-pink-600 shadow-[0_0_15px_rgba(236,72,153,0.3)]">
-                    <i class="fa-solid fa-code text-sm"></i> <span class="tracking-wide text-sm">PROG. CREATOR</span>
+                <button type="button" onclick="openCreatorModal()" class="flex-1 sm:flex-none bg-gradient-to-r from-fuchsia-800 to-pink-700 text-white text-xs font-mono font-bold px-3 py-2.5 rounded-xl flex items-center justify-center gap-1.5 hover:from-fuchsia-700 hover:to-pink-600 shadow-[0_0_15px_rgba(236,72,153,0.3)] min-w-[120px]">
+                    <i class="fa-solid fa-code text-sm"></i> <span class="tracking-wide text-xs sm:text-sm">PROG. CREATOR</span>
                 </button>
-                <button type="button" onclick="toggleThemeInterface()" class="bg-slate-900 border-2 border-[var(--border-color)] text-xs font-mono font-bold px-3 py-2.5 rounded-xl text-cyan-400 hover:bg-slate-800 flex items-center gap-1.5">
+                <button type="button" onclick="toggleThemeInterface()" class="flex-1 sm:flex-none bg-slate-900 border-2 border-[var(--border-color)] text-xs font-mono font-bold px-3 py-2.5 rounded-xl text-cyan-400 hover:bg-slate-800 flex items-center justify-center gap-1.5 min-w-[80px]">
                     <i id="themeIcon" class="fa-solid fa-sun"></i> <span id="themeText">DARK</span>
                 </button>
             </div>
@@ -160,139 +160,145 @@
             </ul>
         </nav>
 
-        <main class="flex-grow py-8 overflow-y-auto max-h-[calc(100vh-14rem)]">
-            <section id="pengantar" class="bg-[var(--bg-card)] p-6 rounded-2xl border-2 border-[var(--border-color)] shadow-xl mb-10 scroll-mt-44">
-                <h2 class="cyber-font text-2xl font-black text-[var(--text-main)] mb-4 uppercase">PENGENDALIAN ALIRAN AIR &amp; FILTER MATRIKS PADA BENDUNGAN</h2>
-                <p class="text-sm text-[var(--text-muted)] leading-relaxed font-medium">Rembesan air pada tubuh bendungan urukan tanah merupakan kondisi tidak terelakkan. Pengendalian yang buruk dapat memicu fenomena <strong>Piping (Erosi Internal)</strong>, peningkatan tekanan angkat (<em>uplift pressure</em>), serta ketidakstabilan lereng hilir.</p>
+        <main class="flex-grow py-6 sm:py-8 overflow-y-auto max-h-[calc(100vh-14rem)] w-full">
+            <section id="pengantar" class="bg-[var(--bg-card)] p-4 sm:p-6 rounded-2xl border-2 border-[var(--border-color)] shadow-xl mb-6 sm:mb-10 scroll-mt-44">
+                <h2 class="cyber-font text-xl sm:text-2xl font-black text-[var(--text-main)] mb-3 uppercase">PENGENDALIAN ALIRAN AIR &amp; FILTER MATRIKS PADA BENDUNGAN</h2>
+                <p class="text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed font-medium">Rembesan air pada tubuh bendungan urukan tanah merupakan kondisi tidak terelakkan. Pengendalian yang buruk dapat memicu fenomena <strong>Piping (Erosi Internal)</strong>, peningkatan tekanan angkat (<em>uplift pressure</em>), serta ketidakstabilan lereng hilir.</p>
             </section>
 
-            <section id="darcyModul" class="mb-10 bg-[var(--bg-card)] p-6 rounded-2xl border-2 border-[var(--border-color)] shadow-lg scroll-mt-44">
-                <h3 class="cyber-font text-base font-black uppercase text-[var(--accent-cyan)] mb-4"><span class="w-2 h-5 bg-cyan-500 inline-block mr-2 rounded-sm"></span>1. Perhitungan Debit Rembesan Dasar (Hukum Darcy)</h3>
+            <section id="darcyModul" class="mb-6 sm:mb-10 bg-[var(--bg-card)] p-4 sm:p-6 rounded-2xl border-2 border-[var(--border-color)] shadow-lg scroll-mt-44">
+                <h3 class="cyber-font text-sm sm:text-base font-black uppercase text-[var(--accent-cyan)] mb-4 flex items-center"><span class="w-2 h-5 bg-cyan-500 inline-block mr-2 rounded-sm flex-shrink-0"></span>1. Perhitungan Debit Rembesan Dasar (Hukum Darcy)</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono mb-4 text-[var(--text-main)]">
-                    <div class="flex flex-col"><label class="mb-1">Koefisien Permeabilitas Tanah, k (cm/s):</label><input type="number" id="k_darcy" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold focus:border-cyan-400" placeholder="1e-4"></div>
-                    <div class="flex flex-col"><label class="mb-1">Beda Tinggi Tekan Aliran, Δh (m):</label><input type="number" id="h_darcy" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold focus:border-cyan-400" placeholder="15"></div>
-                    <div class="flex flex-col"><label class="mb-1">Panjang Lintasan Aliran, L (m):</label><input type="number" id="l_darcy" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold focus:border-cyan-400" placeholder="45"></div>
-                    <div class="flex flex-col"><label class="mb-1">Luas Penampang Aliran, A (m²):</label><input type="number" id="a_darcy" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold focus:border-cyan-400" placeholder="300"></div>
+                    <div class="flex flex-col"><label class="mb-1">Koefisien Permeabilitas Tanah, k (cm/s):</label><input type="number" id="k_darcy" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold focus:border-cyan-400 w-full" placeholder="1e-4"></div>
+                    <div class="flex flex-col"><label class="mb-1">Beda Tinggi Tekan Aliran, Δh (m):</label><input type="number" id="h_darcy" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold focus:border-cyan-400 w-full" placeholder="15"></div>
+                    <div class="flex flex-col"><label class="mb-1">Panjang Lintasan Aliran, L (m):</label><input type="number" id="l_darcy" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold focus:border-cyan-400 w-full" placeholder="45"></div>
+                    <div class="flex flex-col"><label class="mb-1">Luas Penampang Aliran, A (m²):</label><input type="number" id="a_darcy" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold focus:border-cyan-400 w-full" placeholder="300"></div>
                 </div>
                 <div class="flex justify-end gap-3"><button onclick="clearForm('darcyModul')" class="text-xs font-mono font-bold text-slate-400 border border-slate-600 px-4 py-2 rounded">RESET</button><button onclick="hitungDarcy()" class="text-xs font-mono font-bold bg-cyan-500 text-black px-5 py-2 rounded">HITUNG DEBIT</button></div>
-                <div id="res_darcy" class="mt-4 p-3 bg-slate-950/60 border border-cyan-500/20 rounded hidden text-xs font-mono text-cyan-400"></div>
+                <div id="res_darcy" class="mt-4 p-3 bg-slate-950/60 border border-cyan-500/20 rounded hidden text-xs font-mono text-cyan-400 whitespace-normal break-words"></div>
             </section>
 
-            <section id="flownetModul" class="mb-10 bg-[var(--bg-card)] p-6 rounded-2xl border-2 border-[var(--border-color)] shadow-lg scroll-mt-44">
-                <h3 class="cyber-font text-base font-black uppercase text-[var(--accent-purple)] mb-4"><span class="w-2 h-5 bg-purple-500 inline-block mr-2 rounded-sm"></span>2. Analisis Jaring Aliran (Flow Net Analysis)</h3>
+            <section id="flownetModul" class="mb-6 sm:mb-10 bg-[var(--bg-card)] p-4 sm:p-6 rounded-2xl border-2 border-[var(--border-color)] shadow-lg scroll-mt-44">
+                <h3 class="cyber-font text-sm sm:text-base font-black uppercase text-[var(--accent-purple)] mb-4 flex items-center"><span class="w-2 h-5 bg-purple-500 inline-block mr-2 rounded-sm flex-shrink-0"></span>2. Analisis Jaring Aliran (Flow Net Analysis)</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono mb-4 text-[var(--text-main)]">
-                    <div class="flex flex-col"><label class="mb-1">Koefisien Permeabilitas, k (cm/s):</label><input type="number" id="k_flownet" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold" placeholder="2.5e-4"></div>
-                    <div class="flex flex-col"><label class="mb-1">Total Beda Tinggi Energi Head, H (m):</label><input type="number" id="h_flownet" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold" placeholder="20"></div>
-                    <div class="flex flex-col"><label class="mb-1">Jumlah Saluran Aliran (Nf):</label><input type="number" id="nf_flownet" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold" placeholder="4"></div>
-                    <div class="flex flex-col"><label class="mb-1">Jumlah Penurunan Potensial (Nd):</label><input type="number" id="nd_flownet" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold" placeholder="12"></div>
-                    <div class="flex flex-col sm:col-span-2"><label class="mb-1">Lebar Tegak Lurus Bendungan, b (m):</label><input type="number" id="b_flownet" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold" value="1"></div>
+                    <div class="flex flex-col"><label class="mb-1">Koefisien Permeabilitas, k (cm/s):</label><input type="number" id="k_flownet" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold w-full" placeholder="2.5e-4"></div>
+                    <div class="flex flex-col"><label class="mb-1">Total Beda Tinggi Energi Head, H (m):</label><input type="number" id="h_flownet" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold w-full" placeholder="20"></div>
+                    <div class="flex flex-col"><label class="mb-1">Jumlah Saluran Aliran (Nf):</label><input type="number" id="nf_flownet" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold w-full" placeholder="4"></div>
+                    <div class="flex flex-col"><label class="mb-1">Jumlah Penurunan Potensial (Nd):</label><input type="number" id="nd_flownet" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold w-full" placeholder="12"></div>
+                    <div class="flex flex-col sm:col-span-2"><label class="mb-1">Lebar Tegak Lurus Bendungan, b (m):</label><input type="number" id="b_flownet" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold w-full" value="1"></div>
                 </div>
                 <div class="flex justify-end gap-3"><button onclick="clearForm('flownetModul')" class="text-xs font-mono font-bold text-slate-400 border border-slate-600 px-4 py-2 rounded">RESET</button><button onclick="hitungFlowNet()" class="text-xs font-mono font-bold bg-purple-500 text-black px-5 py-2 rounded">HITUNG FLOW NET</button></div>
-                <div id="res_flownet" class="mt-4 p-3 bg-slate-950/60 border border-purple-500/20 rounded hidden text-xs font-mono text-purple-400"></div>
+                <div id="res_flownet" class="mt-4 p-3 bg-slate-950/60 border border-purple-500/20 rounded hidden text-xs font-mono text-purple-400 whitespace-normal break-words"></div>
             </section>
 
-            <section id="pipingModul" class="mb-10 bg-[var(--bg-card)] p-6 rounded-2xl border-2 border-[var(--border-color)] shadow-lg scroll-mt-44">
-                <h3 class="cyber-font text-base font-black uppercase text-[var(--accent-amber)] mb-4"><span class="w-2 h-5 bg-amber-500 inline-block mr-2 rounded-sm"></span>3. Keamanan Terhadap Erosi Internal (Piping)</h3>
+            <section id="pipingModul" class="mb-6 sm:mb-10 bg-[var(--bg-card)] p-4 sm:p-6 rounded-2xl border-2 border-[var(--border-color)] shadow-lg scroll-mt-44">
+                <h3 class="cyber-font text-sm sm:text-base font-black uppercase text-[var(--accent-amber)] mb-4 flex items-center"><span class="w-2 h-5 bg-amber-500 inline-block mr-2 rounded-sm flex-shrink-0"></span>3. Keamanan Terhadap Erosi Internal (Piping)</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono mb-4 text-[var(--text-main)]">
-                    <div class="flex flex-col"><label class="mb-1">Gradien Keluar Nyata (i_exit):</label><input type="number" id="iexit_piping" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold" placeholder="0.25"></div>
-                    <div class="flex flex-col"><label class="mb-1">Berat Jenis Tanah (Gs):</label><input type="number" id="gs_piping" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold" value="2.65"></div>
-                    <div class="flex flex-col"><label class="mb-1">Angka Pori Tanah (e):</label><input type="number" id="e_piping" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold" value="0.70"></div>
+                    <div class="flex flex-col"><label class="mb-1">Gradien Keluar Nyata (i_exit):</label><input type="number" id="iexit_piping" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold w-full" placeholder="0.25"></div>
+                    <div class="flex flex-col"><label class="mb-1">Berat Jenis Tanah (Gs):</label><input type="number" id="gs_piping" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold w-full" value="2.65"></div>
+                    <div class="flex flex-col"><label class="mb-1">Angka Pori Tanah (e):</label><input type="number" id="e_piping" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold w-full" value="0.70"></div>
                 </div>
                 <div class="flex justify-end gap-3"><button onclick="clearForm('pipingModul')" class="text-xs font-mono font-bold text-slate-400 border border-slate-600 px-4 py-2 rounded">RESET</button><button onclick="hitungPiping()" class="text-xs font-mono font-bold bg-amber-500 text-black px-5 py-2 rounded">CEK STABILITAS</button></div>
-                <div id="res_piping" class="mt-4 p-3 bg-slate-950/60 border border-amber-500/20 rounded hidden text-xs font-mono"></div>
+                <div id="res_piping" class="mt-4 p-3 bg-slate-950/60 border border-amber-500/20 rounded hidden text-xs font-mono whitespace-normal break-words"></div>
             </section>
 
-            <section id="filterModul" class="mb-10 bg-[var(--bg-card)] p-6 rounded-2xl border-2 border-[var(--border-color)] shadow-lg scroll-mt-44">
-                <h3 class="cyber-font text-base font-black uppercase text-[var(--accent-emerald)] mb-4"><span class="w-2 h-5 bg-emerald-500 inline-block mr-2 rounded-sm"></span>4. Verifikasi Filter Struktur (Kriteria Terzaghi)</h3>
+            <section id="filterModul" class="mb-6 sm:mb-10 bg-[var(--bg-card)] p-4 sm:p-6 rounded-2xl border-2 border-[var(--border-color)] shadow-lg scroll-mt-44">
+                <h3 class="cyber-font text-sm sm:text-base font-black uppercase text-[var(--accent-emerald)] mb-4 flex items-center"><span class="w-2 h-5 bg-emerald-500 inline-block mr-2 rounded-sm flex-shrink-0"></span>4. Verifikasi Filter Struktur (Kriteria Terzaghi)</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono mb-4 text-[var(--text-main)]">
-                    <div class="flex flex-col"><label class="mb-1">Ukuran Butir Filter 15% Lolos, D15f (mm):</label><input type="number" id="d15f" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold" placeholder="0.8"></div>
-                    <div class="flex flex-col"><label class="mb-1">Ukuran Butir Base Soil 15% Lolos, D15b (mm):</label><input type="number" id="d15b" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold" placeholder="0.05"></div>
-                    <div class="flex flex-col sm:col-span-2"><label class="mb-1">Ukuran Butir Base Soil 85% Lolos, D85b (mm):</label><input type="number" id="d85b" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold" placeholder="0.25"></div>
+                    <div class="flex flex-col"><label class="mb-1">Ukuran Butir Filter 15% Lolos, D15f (mm):</label><input type="number" id="d15f" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold w-full" placeholder="0.8"></div>
+                    <div class="flex flex-col"><label class="mb-1">Ukuran Butir Base Soil 15% Lolos, D15b (mm):</label><input type="number" id="d15b" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold w-full" placeholder="0.05"></div>
+                    <div class="flex flex-col sm:col-span-2"><label class="mb-1">Ukuran Butir Base Soil 85% Lolos, D85b (mm):</label><input type="number" id="d85b" class="bg-[var(--bg-input)] border border-slate-700 p-2.5 rounded text-[var(--text-main)] font-bold w-full" placeholder="0.25"></div>
                 </div>
                 <div class="flex justify-end gap-3"><button onclick="clearForm('filterModul')" class="text-xs font-mono font-bold text-slate-400 border border-slate-600 px-4 py-2 rounded">RESET</button><button onclick="hitungTerzaghi()" class="text-xs font-mono font-bold bg-emerald-500 text-black px-5 py-2 rounded">VERIFIKASI FILTER</button></div>
-                <div id="res_filter" class="mt-4 p-3 bg-slate-950/60 border border-emerald-500/20 rounded hidden text-xs font-mono"></div>
+                <div id="res_filter" class="mt-4 p-3 bg-slate-950/60 border border-emerald-500/20 rounded hidden text-xs font-mono whitespace-normal break-words"></div>
             </section>
         </main>
     </div>
 
-    <div id="helpModal" class="fixed inset-0 z-50 hidden bg-black/75 flex items-center justify-center p-4">
-        <div id="draggableHelpPanel" class="bg-[#0b1528] border-2 border-emerald-500 rounded-2xl w-full max-w-3xl absolute shadow-[0_0_40px_rgba(16,185,129,0.4)] flex flex-col text-slate-200">
-            <div id="helpDragHandle" class="drag-handle p-4 bg-slate-950 border-b border-slate-800 rounded-t-2xl flex justify-between items-center">
-                <div class="flex items-center gap-2 text-emerald-400 font-bold cyber-font text-sm tracking-wider uppercase">
-                    <i class="fa-solid fa-circle-question"></i> GEOTECHNICAL RECONNAISSANCE MANUAL V4
+    <div id="helpModal" class="fixed inset-0 z-50 hidden bg-black/75 flex items-center justify-center p-2 sm:p-4">
+        <div id="draggableHelpPanel" class="bg-[#0b1528] border-2 border-emerald-500 rounded-2xl w-full max-w-3xl absolute shadow-[0_0_40px_rgba(16,185,129,0.4)] flex flex-col text-slate-200 top-4 bottom-4 sm:top-auto sm:bottom-auto">
+            <div id="helpDragHandle" class="drag-handle p-4 bg-slate-950 border-b border-slate-800 rounded-t-2xl flex justify-between items-center flex-shrink-0">
+                <div class="flex items-center gap-2 text-emerald-400 font-bold cyber-font text-xs sm:text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-circle-question"></i> GEOTECHNICAL MANUAL V4
                 </div>
                 <button type="button" onclick="closeHelpModal()" class="text-slate-400 hover:text-red-400 p-1"><i class="fa-solid fa-xmark text-xl"></i></button>
             </div>
             
-            <div class="p-6 space-y-6 text-xs max-h-[65vh] overflow-y-auto font-mono text-slate-300 leading-relaxed">
-                <div class="p-4 bg-slate-950/80 rounded-xl border border-slate-800">
-                    <h4 class="text-sm font-black text-cyan-400 uppercase mb-2">1. PERSAMAAN REMBESAN DASAR &amp; JARING ARUS</h4>
-                    <p class="mb-2"><strong>Hukum Darcy (Aliran 1D):</strong> q = k * i * A</p>
-                    <p class="mb-3"><strong>Kuantitas Jaring Arus (Flow Net 2D):</strong> Q = k * H * (Nf / Nd) * b</p>
+            <div class="p-4 sm:p-6 space-y-6 text-[11px] sm:text-xs overflow-y-auto flex-1 font-mono text-slate-300 leading-relaxed">
+                <div class="p-3 sm:p-4 bg-slate-950/80 rounded-xl border border-slate-800">
+                    <h4 class="text-xs sm:text-sm font-black text-cyan-400 uppercase mb-2">1. PERSAMAAN REMBESAN DASAR &amp; JARING ARUS</h4>
+                    <p class="mb-1 whitespace-normal break-words"><strong>Hukum Darcy (Aliran 1D):</strong> q = k * i * A</p>
+                    <p class="mb-3 whitespace-normal break-words"><strong>Kuantitas Jaring Arus (Flow Net 2D):</strong> Q = k * H * (Nf / Nd) * b</p>
                     
-                    <table class="w-full text-left border-collapse border border-slate-800 text-[11px] mb-2">
-                        <thead>
-                            <tr class="bg-slate-900 text-cyan-400">
-                                <th class="p-1.5 border border-slate-800">Simbol</th>
-                                <th class="p-1.5 border border-slate-800">Deskripsi Parameter Metrik</th>
-                                <th class="p-1.5 border border-slate-800">Satuan Standar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td class="p-1 border border-slate-800">q / Q</td><td class="p-1 border border-slate-800">Debit Aliran Rembesan Aktual</td><td class="p-1 border border-slate-800">m³/s atau m³/hari</td></tr>
-                            <tr><td class="p-1 border border-slate-800">k</td><td class="p-1 border border-slate-800">Koefisien Permeabilitas Hidrolik Tanah</td><td class="p-1 border border-slate-800">cm/s atau m/s</td></tr>
-                            <tr><td class="p-1 border border-slate-800">i</td><td class="p-1 border border-slate-800">Gradien Hidrolik Aliran (Δh / L)</td><td class="p-1 border border-slate-800">Dimensi (Rasio)</td></tr>
-                            <tr><td class="p-1 border border-slate-800">Nf / Nd</td><td class="p-1 border border-slate-800">Jumlah Saluran Aliran / Kehilangan Potensial</td><td class="p-1 border border-slate-800">Angka Mutlak</td></tr>
-                        </tbody>
-                    </table>
+                    <div class="overflow-x-auto w-full">
+                        <table class="w-full text-left border-collapse border border-slate-800 text-[10px] sm:text-[11px] min-w-[400px]">
+                            <thead>
+                                <tr class="bg-slate-900 text-cyan-400">
+                                    <th class="p-1.5 border border-slate-800 w-16">Simbol</th>
+                                    <th class="p-1.5 border border-slate-800">Deskripsi Parameter Metrik</th>
+                                    <th class="p-1.5 border border-slate-800 w-24">Satuan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="p-1 border border-slate-800 font-bold">q / Q</td><td class="p-1 border border-slate-800">Debit Aliran Rembesan Aktual</td><td class="p-1 border border-slate-800">m³/s atau m³/hari</td></tr>
+                                <tr><td class="p-1 border border-slate-800 font-bold">k</td><td class="p-1 border border-slate-800">Koefisien Permeabilitas Hidrolik Tanah</td><td class="p-1 border border-slate-800">cm/s atau m/s</td></tr>
+                                <tr><td class="p-1 border border-slate-800 font-bold">i</td><td class="p-1 border border-slate-800">Gradien Hidrolik Aliran (Δh / L)</td><td class="p-1 border border-slate-800">Rasio</td></tr>
+                                <tr><td class="p-1 border border-slate-800 font-bold">Nf / Nd</td><td class="p-1 border border-slate-800">Jumlah Saluran Aliran / Kehilangan Potensial</td><td class="p-1 border border-slate-800">Mutlak</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
-                <div class="p-4 bg-slate-950/80 rounded-xl border border-slate-800">
-                    <h4 class="text-sm font-black text-amber-500 uppercase mb-2">2. EVALUASI ERORI INTERNAL (PIPING ANALYSIS)</h4>
-                    <p class="mb-2"><strong>Gradien Kritis (Critical Gradient):</strong> ic = (Gs - 1) / (1 + e)</p>
-                    <p class="mb-3"><strong>Faktor Keamanan (Factor of Safety):</strong> FS = ic / iexit</p>
+                <div class="p-3 sm:p-4 bg-slate-950/80 rounded-xl border border-slate-800">
+                    <h4 class="text-xs sm:text-sm font-black text-amber-500 uppercase mb-2">2. EVALUASI ERORI INTERNAL (PIPING ANALYSIS)</h4>
+                    <p class="mb-1 whitespace-normal break-words"><strong>Gradien Kritis (Critical Gradient):</strong> ic = (Gs - 1) / (1 + e)</p>
+                    <p class="mb-3 whitespace-normal break-words"><strong>Faktor Keamanan (Factor of Safety):</strong> FS = ic / iexit</p>
                     
-                    <table class="w-full text-left border-collapse border border-slate-800 text-[11px] mb-2">
-                        <thead>
-                            <tr class="bg-slate-900 text-amber-400">
-                                <th class="p-1.5 border border-slate-800">Simbol</th>
-                                <th class="p-1.5 border border-slate-800">Deskripsi Parameter Metrik</th>
-                                <th class="p-1.5 border border-slate-800">Satuan Standar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td class="p-1 border border-slate-800">ic</td><td class="p-1 border border-slate-800">Gradien Hidrolik Batas Kritis Material</td><td class="p-1 border border-slate-800">Dimensi (Rasio)</td></tr>
-                            <tr><td class="p-1 border border-slate-800">Gs</td><td class="p-1 border border-slate-800">Berat Jenis Spesifik Butiran Padat Tanah</td><td class="p-1 border border-slate-800">Rasio (Umumnya 2.65)</td></tr>
-                            <tr><td class="p-1 border border-slate-800">e</td><td class="p-1 border border-slate-800">Angka Pori (Void Ratio) Void Struktural</td><td class="p-1 border border-slate-800">Desimal</td></tr>
-                        </tbody>
-                    </table>
+                    <div class="overflow-x-auto w-full">
+                        <table class="w-full text-left border-collapse border border-slate-800 text-[10px] sm:text-[11px] min-w-[400px]">
+                            <thead>
+                                <tr class="bg-slate-900 text-amber-400">
+                                    <th class="p-1.5 border border-slate-800 w-16">Simbol</th>
+                                    <th class="p-1.5 border border-slate-800">Deskripsi Parameter Metrik</th>
+                                    <th class="p-1.5 border border-slate-800 w-24">Satuan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="p-1 border border-slate-800 font-bold">ic</td><td class="p-1 border border-slate-800">Gradien Hidrolik Batas Kritis Material</td><td class="p-1 border border-slate-800">Rasio</td></tr>
+                                <tr><td class="p-1 border border-slate-800 font-bold">Gs</td><td class="p-1 border border-slate-800">Berat Jenis Spesifik Butiran Padat Tanah</td><td class="p-1 border border-slate-800">Rasio (2.65)</td></tr>
+                                <tr><td class="p-1 border border-slate-800 font-bold">e</td><td class="p-1 border border-slate-800">Angka Pori (Void Ratio) Void Struktural</td><td class="p-1 border border-slate-800">Desimal</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
-                <div class="p-4 bg-slate-950/80 rounded-xl border border-slate-800">
-                    <h4 class="text-sm font-black text-emerald-400 uppercase mb-2">3. VERIFIKASI GRADASI FILTER TERZAGHI</h4>
-                    <p class="mb-1"><strong>Kriteria 1 (Retensi):</strong> D15f / D85b &lt;= 5</p>
-                    <p class="mb-3"><strong>Kriteria 2 (Permeabilitas):</strong> D15f / D15b &gt;= 4</p>
+                <div class="p-3 sm:p-4 bg-slate-950/80 rounded-xl border border-slate-800">
+                    <h4 class="text-xs sm:text-sm font-black text-emerald-400 uppercase mb-2">3. VERIFIKASI GRADASI FILTER TERZAGHI</h4>
+                    <p class="mb-1 whitespace-normal break-words"><strong>Kriteria 1 (Retensi):</strong> D15f / D85b &lt;= 5</p>
+                    <p class="mb-3 whitespace-normal break-words"><strong>Kriteria 2 (Permeabilitas):</strong> D15f / D15b &gt;= 4</p>
                     
-                    <table class="w-full text-left border-collapse border border-slate-800 text-[11px] mb-3">
-                        <thead>
-                            <tr class="bg-slate-900 text-emerald-400">
-                                <th class="p-1.5 border border-slate-800">Komponen</th>
-                                <th class="p-1.5 border border-slate-800">Deskripsi Gradasi Butiran Saringan</th>
-                                <th class="p-1.5 border border-slate-800">Satuan Standar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td class="p-1 border border-slate-800">D15f</td><td class="p-1 border border-slate-800">Ukuran butir saringan di mana 15% dari berat total material filter lolos</td><td class="p-1 border border-slate-800">mm</td></tr>
-                            <tr><td class="p-1 border border-slate-800">D85b</td><td class="p-1 border border-slate-800">Ukuran butir saringan di mana 85% dari berat total material tanah dasar (base) lolos</td><td class="p-1 border border-slate-800">mm</td></tr>
-                            <tr><td class="p-1 border border-slate-800">D15b</td><td class="p-1 border border-slate-800">Ukuran butir saringan di mana 15% dari berat total material tanah dasar (base) lolos</td><td class="p-1 border border-slate-800">mm</td></tr>
-                        </tbody>
-                    </table>
+                    <div class="overflow-x-auto w-full">
+                        <table class="w-full text-left border-collapse border border-slate-800 text-[10px] sm:text-[11px] min-w-[400px]">
+                            <thead>
+                                <tr class="bg-slate-900 text-emerald-400">
+                                    <th class="p-1.5 border border-slate-800 w-16">Komponen</th>
+                                    <th class="p-1.5 border border-slate-800">Deskripsi Gradasi Butiran Saringan</th>
+                                    <th class="p-1.5 border border-slate-800 w-24">Satuan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="p-1 border border-slate-800 font-bold">D15f</td><td class="p-1 border border-slate-800">Ukuran butir filter di mana 15% berat total material lolos</td><td class="p-1 border border-slate-800">mm</td></tr>
+                                <tr><td class="p-1 border border-slate-800 font-bold">D85b</td><td class="p-1 border border-slate-800">Ukuran butir base soil di mana 85% berat total material lolos</td><td class="p-1 border border-slate-800">mm</td></tr>
+                                <tr><td class="p-1 border border-slate-800 font-bold">D15b</td><td class="p-1 border border-slate-800">Ukuran butir base soil di mana 15% berat total material lolos</td><td class="p-1 border border-slate-800">mm</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
-                <div class="p-4 bg-slate-950/90 rounded-xl border-2 border-amber-500/40 text-[12px] font-sans">
-                    <strong class="text-amber-400 font-tech uppercase block mb-1 text-xs"><i class="fa-solid fa-gavel"></i> SARAN KESIMPULAN REKAYASA PRAKTEK DI LAPANGAN</strong>
-                    <p class="text-slate-300 leading-relaxed">
-                        Berdasarkan standar keselamatan bendungan urukan, kontrol rembesan wajib menggunakan zona kedap (core) dengan nilai permeabilitas k &lt; 1e-5 cm/s. Jika hasil evaluasi matematis pada sistem ini mendeteksi nilai Factor of Safety terhadap Piping kurang dari 3.0 (FS &lt; 3.0), maka langkah darurat pencegahan wajib segera diaplikasikan di lapangan. Solusi preventif meliputi pemasangan <em>Grout Curtain</em> pada zona pondasi batuan, penambahan ketebalan <em>Drainage Blanket</em> pada kaki hilir, serta wajib merancang zonasi gradasi filter yang memenuhi kriteria kritis Terzaghi demi menghindari bencana likuifaksi internal dan sembulan pasir (sand boiling).
+                <div class="p-3 sm:p-4 bg-slate-950/90 rounded-xl border-2 border-amber-500/40 text-[11px] sm:text-[12px] font-sans">
+                    <strong class="text-amber-400 uppercase block mb-1 text-xs"><i class="fa-solid fa-gavel"></i> SARAN KESIMPULAN REKAYASA PRAKTEK DI LAPANGAN</strong>
+                    <p class="text-slate-300 leading-relaxed text-justify">
+                        Berdasarkan standar keselamatan bendungan urukan, kontrol rembesan wajib menggunakan zona kedap dengan nilai permeabilitas k &lt; 1e-5 cm/s. Jika hasil evaluasi matematis pada sistem ini mendeteksi nilai Factor of Safety terhadap Piping kurang dari 3.0 (FS &lt; 3.0), maka langkah darurat pencegahan wajib segera diaplikasikan di lapangan. Solusi preventif meliputi pemasangan <em>Grout Curtain</em> pada zona pondasi batuan, penambahan ketebalan <em>Drainage Blanket</em> pada kaki hilir, serta wajib merancang zonasi gradasi filter yang memenuhi kriteria kritis Terzaghi demi menghindari bencana likuifaksi internal dan sembulan pasir.
                     </p>
                 </div>
             </div>
@@ -300,23 +306,23 @@
     </div>
 
     <div id="creatorModal" class="fixed inset-0 z-50 hidden bg-black/75 flex items-center justify-center p-4">
-        <div id="draggablePanel" class="bg-[#0b142c] border-2 border-slate-800 rounded-2xl w-full max-w-[480px] p-6 absolute shadow-[0_0_35px_rgba(0,0,0,0.8)]">
+        <div id="draggablePanel" class="bg-[#0b142c] border-2 border-slate-800 rounded-2xl w-full max-w-[440px] p-5 sm:p-6 absolute shadow-[0_0_35px_rgba(0,0,0,0.8)]">
             <div id="dragHandle" class="drag-handle pb-4 border-b border-slate-800 flex justify-between items-center">
-                <h3 class="text-sm font-bold cyber-font text-cyan-400 tracking-widest uppercase">ENGINEER IDENTIFICATION CARD</h3>
+                <h3 class="text-xs font-bold cyber-font text-cyan-400 tracking-widest uppercase">ENGINEER IDENTIFICATION CARD</h3>
                 <button type="button" onclick="closeCreatorModal()" class="text-slate-400 hover:text-white text-xl p-1"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="mt-4 space-y-3 font-mono text-xs text-slate-300">
-                <div><span class="block text-[10px] text-slate-500 font-bold uppercase">AUTHORIZED PROGRAMMER</span><strong class="text-white text-sm">MOHAMAD HARTADI (ADI)</strong></div>
-                <div class="pt-3 space-y-2 border-t border-slate-800">
-                    <div class="flex items-center gap-3"><i class="fa-brands fa-facebook text-blue-400 text-base"></i><a href="https://facebook.com/m.hartadi" target="_blank" class="text-blue-400 hover:underline">facebook.com/m.hartadi</a></div>
-                    <div class="flex items-center gap-3"><i class="fa-solid fa-globe text-pink-500 text-base"></i><a href="https://newbieonline7.blogspot.com" target="_blank" class="text-pink-500 hover:underline">newbieonline7.blogspot.com</a></div>
+                <div><span class="block text-[10px] text-slate-500 font-bold uppercase">AUTHORIZED PROGRAMMER</span><strong class="text-white text-sm sm:text-base">MOHAMAD HARTADI (ADI)</strong></div>
+                <div class="pt-3 space-y-2 border-t border-slate-800 text-[11px] sm:text-xs">
+                    <div class="flex items-center gap-3"><i class="fa-brands fa-facebook text-blue-400 text-base"></i><a href="https://facebook.com/m.hartadi" target="_blank" class="text-blue-400 hover:underline break-all">facebook.com/m.hartadi</a></div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-globe text-pink-500 text-base"></i><a href="https://newbieonline7.blogspot.com" target="_blank" class="text-pink-500 hover:underline break-all">newbieonline7.blogspot.com</a></div>
                     <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i><a href="https://wa.me/6282231036047" target="_blank" class="text-emerald-400 font-bold hover:underline">082231036047</a></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="chatBoxContainer" class="hidden fixed bottom-24 right-6 w-80 sm:w-96 bg-[#070e1e] border-2 border-cyan-500 rounded-2xl shadow-[0_0_30px_rgba(6,182,212,0.4)] overflow-hidden flex flex-col z-[110]">
+    <div id="chatBoxContainer" class="hidden fixed bottom-24 right-4 left-4 sm:left-auto sm:right-6 w-auto sm:w-96 bg-[#070e1e] border-2 border-cyan-500 rounded-2xl shadow-[0_0_30px_rgba(6,182,212,0.4)] overflow-hidden flex flex-col z-[110]">
         <div class="bg-slate-950 p-4 border-b-2 border-cyan-500/30 flex justify-between items-center text-[var(--text-main)] font-mono text-xs">
             <div class="flex items-center gap-2.5">
                 <svg width="34" height="34" viewBox="0 0 100 100" class="bg-slate-900 rounded-lg p-0.5 border border-cyan-400"><rect x="15" y="20" width="70" height="65" rx="15" fill="#0f172a" stroke="#06b6d4" stroke-width="3"/><circle cx="35" cy="45" r="7" fill="#10b981"/><circle cx="65" cy="45" r="7" fill="#10b981"/><path d="M35 68 Q50 75 65 68" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/></svg>
@@ -328,52 +334,52 @@
             <button type="button" onclick="toggleChatbotBox()" class="text-slate-400 hover:text-white p-1 text-lg"><i class="fa-solid fa-angle-down"></i></button>
         </div>
 
-        <div id="chatMessageLog" class="p-4 h-44 overflow-y-auto space-y-3 font-medium text-xs leading-relaxed text-slate-300 bg-slate-950/40 font-sans">
+        <div id="chatMessageLog" class="p-4 h-40 overflow-y-auto space-y-3 font-medium text-xs leading-relaxed text-slate-300 bg-slate-950/40">
             <div class="bg-slate-900 border border-slate-800 p-3 rounded-xl rounded-tl-none">Halo! Saya asisten robot kucing pintar bendungan. Klik simulasi opsi pertanyaan topik Phase 4 di bawah untuk melihat detail parameter rekayasa:</div>
         </div>
 
         <div class="p-3 bg-slate-950/80 border-t border-slate-800 max-h-32 overflow-y-auto space-y-1">
-            <button onclick="pemicuPertanyaanBot(1)" class="w-full text-left bg-slate-900 border border-slate-800 p-1.5 rounded text-[10px] text-cyan-400 font-mono block">&raquo; Q1: Resiko utama jika debit rembesan bendungan urukan terlalu besar?</button>
-            <button onclick="pemicuPertanyaanBot(2)" class="w-full text-left bg-slate-900 border border-slate-800 p-1.5 rounded text-[10px] text-pink-400 font-mono block">&raquo; Q2: Kapan bahaya Piping/Boiling terjadi berdasarkan parameter FS?</button>
-            <button onclick="pemicuPertanyaanBot(3)" class="w-full text-left bg-slate-900 border border-slate-800 p-1.5 rounded text-[10px] text-purple-400 font-mono block">&raquo; Q3: Apa pengaruh rasio bentuk Nf/Nd pada pemodelan Flow Net?</button>
-            <button onclick="pemicuPertanyaanBot(4)" class="w-full text-left bg-slate-900 border border-slate-800 p-1.5 rounded text-[10px] text-emerald-400 font-mono block">&raquo; Q4: Bagaimana cara kerja Kriteria Permeabilitas Terzaghi pada drainase?</button>
+            <button onclick="pemicuPertanyaanBot(1)" class="w-full text-left bg-slate-900 border border-slate-800 p-1.5 rounded text-[10px] text-cyan-400 font-mono block truncate">&raquo; Q1: Resiko utama jika debit rembesan bendungan urukan terlalu besar?</button>
+            <button onclick="pemicuPertanyaanBot(2)" class="w-full text-left bg-slate-900 border border-slate-800 p-1.5 rounded text-[10px] text-pink-400 font-mono block truncate">&raquo; Q2: Kapan bahaya Piping/Boiling terjadi berdasarkan parameter FS?</button>
+            <button onclick="pemicuPertanyaanBot(3)" class="w-full text-left bg-slate-900 border border-slate-800 p-1.5 rounded text-[10px] text-purple-400 font-mono block truncate">&raquo; Q3: Apa pengaruh rasio bentuk Nf/Nd pada pemodelan Flow Net?</button>
+            <button onclick="pemicuPertanyaanBot(4)" class="w-full text-left bg-slate-900 border border-slate-800 p-1.5 rounded text-[10px] text-emerald-400 font-mono block truncate">&raquo; Q4: Bagaimana cara kerja Kriteria Permeabilitas Terzaghi pada drainase?</button>
         </div>
 
-        <div class="p-3 bg-slate-950 border-t border-slate-800 flex flex-col gap-1 font-mono text-[10px] text-slate-400 border-t-2 border-slate-800">
-            <div class="flex justify-between border-b border-slate-900 pb-1"><span class="text-slate-500 font-bold">SYSTEM PROGRAMMER:</span><strong class="text-white font-bold text-[11px]">MOHAMAD HARTADI (ADI)</strong></div>
-            <div class="flex flex-col gap-0.5 text-[11px]">
-                <div class="text-[9px] text-slate-400 font-sans font-medium mb-1">Civil &amp; Geotechnical Engineer (Water Resources, Dam Safety &amp; Structural Expert)</div>
+        <div class="p-3 bg-slate-950 border-t border-slate-800 flex flex-col gap-1 font-mono text-[10px] text-slate-400">
+            <div class="flex justify-between border-b border-slate-900 pb-1"><span class="text-slate-500 font-bold">SYSTEM PROGRAMMER:</span><strong class="text-white font-bold text-[10px] sm:text-[11px]">MOHAMAD HARTADI (ADI)</strong></div>
+            <div class="flex flex-col gap-0.5 text-[10px] sm:text-[11px]">
+                <div class="text-[9px] text-slate-400 font-sans font-medium mb-1 leading-tight">Civil &amp; Geotechnical Engineer (Water Resources, Dam Safety Expert)</div>
                 <a href="https://facebook.com/m.hartadi" target="_blank" class="text-blue-400 hover:underline"><i class="fa-brands fa-facebook"></i> facebook.com/m.hartadi</a>
                 <a href="https://newbieonline7.blogspot.com" target="_blank" class="text-pink-500 hover:underline"><i class="fa-solid fa-globe"></i> newbieonline7.blogspot.com</a>
-                <div class="flex justify-between items-center bg-slate-900 p-1 rounded mt-1"><span class="text-emerald-400 font-bold"><i class="fa-brands fa-whatsapp"></i> 082231036047</span><a href="https://wa.me/6282231036047" target="_blank" class="bg-emerald-600 text-white font-bold px-1.5 py-0.5 rounded text-[9px]">DIRECT CALL</a></div>
+                <div class="flex justify-between items-center bg-slate-900 p-1 rounded mt-1"><span class="text-emerald-400 font-bold"><i class="fa-brands fa-whatsapp"></i> 082231036047</span><a href="https://wa.me/6282231036047" target="_blank" class="bg-emerald-600 text-white font-bold px-1.5 py-0.5 rounded text-[9px]">CALL</a></div>
             </div>
         </div>
     </div>
 
-    <div id="screensaverArea" class="fixed inset-0 bg-[#020512] z-50 hidden flex flex-col justify-center items-center p-6 text-center select-none">
-        <div class="mb-6 bg-slate-950/90 border border-cyan-500/30 rounded-3xl p-6 min-w-[300px]">
-            <div id="scDate" class="text-xs font-black text-slate-500 uppercase tracking-widest cyber-font mb-1">RETRIEVING DATA...</div>
-            <div class="text-4xl font-black text-cyan-400 cyber-font tracking-widest flex items-center justify-center gap-2"><span id="scTime">00:00:00</span><span class="text-sm text-slate-500 font-mono">WITA</span></div>
+    <div id="screensaverArea" class="fixed inset-0 bg-[#020512] z-50 hidden flex flex-col justify-center items-center p-4 text-center select-none">
+        <div class="mb-6 bg-slate-950/90 border border-cyan-500/30 rounded-3xl p-6 min-w-[260px]">
+            <div id="scDate" class="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest cyber-font mb-1">RETRIEVING DATA...</div>
+            <div class="text-3xl sm:text-4xl font-black text-cyan-400 cyber-font tracking-widest flex items-center justify-center gap-2"><span id="scTime">00:00:00</span><span class="text-xs sm:text-sm text-slate-500 font-mono">WITA</span></div>
         </div>
-        <div class="w-56 h-56 mb-4">
+        <div class="w-44 h-44 sm:w-56 sm:h-56 mb-4">
             <svg viewBox="0 0 300 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><g class="cat-tail"><path d="M150 230 Q120 280 90 250 Q70 230 80 210" fill="none" stroke="#00f0ff" stroke-width="8" stroke-linecap="round"/></g><g class="cat-ear-left"><path d="M50 140 L90 50 L115 115 Z" fill="#111827" stroke="#00f0ff" stroke-width="4"/><path d="M65 130 L93 68 L105 115 Z" fill="#f43f5e"/></g><g class="cat-ear-right"><path d="M250 140 L210 50 L185 115 Z" fill="#111827" stroke="#00f0ff" stroke-width="4"/><path d="M235 130 L207 68 L195 115 Z" fill="#f43f5e"/></g><rect x="75" y="100" width="150" height="130" rx="45" fill="#0f172a" stroke="#00f0ff" stroke-width="5" /><circle cx="95" cy="185" r="8" fill="#00f0ff" opacity="0.25" /><circle cx="205" cy="185" r="8" fill="#00f0ff" opacity="0.25" /><g class="cat-eye"><circle cx="110" cy="145" r="15" fill="#020617" stroke="#10b981" stroke-width="3.5"/><circle cx="107" cy="141" r="5" fill="#ffffff" /></g><g class="cat-eye"><circle cx="190" cy="145" r="15" fill="#020617" stroke="#10b981" stroke-width="3.5"/><circle cx="186" cy="141" r="5" fill="#ffffff" /></g><polygon points="150,165 144,157 156,157" fill="#f59e0b" /><path d="M138 172 Q144 178 150 172 Q156 178 162 172" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/><line x1="150" y1="100" x2="150" y2="65" stroke="#00f0ff" stroke-width="4" /><circle cx="150" cy="60" r="7" fill="#f59e0b" class="animate-pulse" /></svg>
         </div>
-        <p class="text-slate-400 font-mono text-xs animate-pulse">SISTEM BERADA DALAM MONITORING REHAT STATIS.<br><span class="text-amber-500 font-bold">SENTUH LAYAR / GERAKKAN MOUSE</span> UNTUK KEMBALI.</p>
+        <p class="text-slate-400 font-mono text-[11px] sm:text-xs animate-pulse">SISTEM BERADA DALAM MONITORING REHAT STATIS.<br><span class="text-amber-500 font-bold">SENTUH LAYAR UNTUK KEMBALI.</span></p>
     </div>
 
-    <footer class="sticky bottom-0 left-0 right-0 z-40 border-t-2 border-[var(--border-color)] bg-slate-950 py-4 px-6 text-center text-xs font-mono text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-3 shadow-[0_-5px_20px_rgba(0,0,0,0.6)]">
-        <div class="flex items-center gap-2 text-sm text-[var(--text-main)] font-bold">
-            <span>System Automation Platform:</span>
+    <footer class="sticky bottom-0 left-0 right-0 z-40 border-t-2 border-[var(--border-color)] bg-slate-950 py-4 px-4 sm:px-6 text-center text-xs font-mono text-slate-400 flex flex-col md:flex-row justify-between items-center gap-3 shadow-[0_-5px_20px_rgba(0,0,0,0.6)]">
+        <div class="flex items-center gap-2 text-xs sm:text-sm text-[var(--text-main)] font-bold">
+            <span>Automation Platform:</span>
             <span class="text-cyan-400 font-bold"><i class="fa-solid fa-circle-nodes text-emerald-400 animate-pulse"></i> Mohamad Hartadi</span>
         </div>
-        <div class="font-bold tracking-wider text-[11px]">COASTAL &amp; GEOTECHNICAL SUITE SYSTEM © 2026</div>
+        <div class="font-bold tracking-wider text-[10px] sm:text-[11px] order-3 md:order-none">COASTAL &amp; GEOTECHNICAL SYSTEM © 2026</div>
 
-        <div class="flex items-center gap-2">
-            <button type="button" onclick="triggerScreensaver()" class="bg-slate-900 border border-amber-500 text-[var(--text-main)] font-bold px-3 py-2 rounded-xl hover:bg-amber-950/40 flex items-center gap-1.5 transition-all shadow-md">
-                <i class="fa-solid fa-desktop text-sm text-amber-400"></i> <span>SCREENSAVER</span>
+        <div class="flex items-center gap-2 w-full sm:w-auto justify-center">
+            <button type="button" onclick="triggerScreensaver()" class="flex-1 sm:flex-none bg-slate-900 border border-amber-500 text-[var(--text-main)] font-bold px-3 py-2 rounded-xl hover:bg-amber-950/40 flex items-center justify-center gap-1.5 transition-all text-xs">
+                <i class="fa-solid fa-desktop text-amber-400"></i> <span>SCREENSAVER</span>
             </button>
-            <button type="button" onclick="toggleChatbotBox()" class="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold px-4 py-2 rounded-xl border border-cyan-400 flex items-center gap-1.5 transition-all shadow-md">
-                <i class="fa-solid fa-comments text-sm"></i> <span>CHATBOT TERMINAL</span>
+            <button type="button" onclick="toggleChatbotBox()" class="flex-1 sm:flex-none bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold px-4 py-2 rounded-xl border border-cyan-400 flex items-center justify-center gap-1.5 transition-all text-xs">
+                <i class="fa-solid fa-comments"></i> <span>CHATBOT</span>
             </button>
         </div>
     </footer>
@@ -381,7 +387,7 @@
     <script>
         let currentTheme = 'dark';
         let idleTimer;
-        const idleTimeoutDuration = 30000;
+        const idleTimeoutDuration = 60000; // 1 Menit rehat
 
         function initLiveSystemClock() {
             function updateClock() {
@@ -444,7 +450,7 @@
         function triggerScreensaver() { document.getElementById('screensaverArea').classList.remove('hidden'); }
         document.getElementById('screensaverArea').addEventListener('click', () => { document.getElementById('screensaverArea').classList.add('hidden'); resetIdleTimer(); });
         function resetIdleTimer() { clearTimeout(idleTimer); idleTimer = setTimeout(triggerScreensaver, idleTimeoutDuration); }
-        window.onload = resetIdleTimer; document.onmousemove = resetIdleTimer;
+        window.onload = resetIdleTimer; document.onmousemove = resetIdleTimer; document.ontouchstart = resetIdleTimer;
 
         function openHelpModal() { document.getElementById('helpModal').classList.remove('hidden'); }
         function closeHelpModal() { document.getElementById('helpModal').classList.add('hidden'); }
@@ -486,7 +492,7 @@
             const aman = r_retensi <= 5 && r_perm >= 4;
             const res = document.getElementById('res_filter');
             res.className = `mt-4 p-3 bg-slate-950/60 border rounded text-xs font-mono ${aman ? 'text-emerald-400 border-emerald-500' : 'text-red-400 border-red-500'}`;
-            res.innerHTML = `• Rasio Retensi (D15f/D85b): ${r_retensi.toFixed(2)} (${r_retensi<=5?'OK':'FAIL &gt; 5'})<br>• Rasio Permeabilitas (D15f/D15b): ${r_perm.toFixed(2)} (${r_perm>=4?'OK':'FAIL &lt; 4'})<br>• KESIMPULAN: ${aman?'STRUKTUR GRADASI FILTER AMAN &amp; LAYAK':'FILTER GAGAL, WAJIB REDESIGN!'}`;
+            res.innerHTML = `• Rasio Retensi (D15f/D85b): ${r_retensi.toFixed(2)} (${r_retensi<=5?'OK':'FAIL &gt; 5'})<br>• Rasio Permeabilitas (D15f/D15b): ${r_perm.toFixed(2)} (${r_perm>=4?'OK':'FAIL &lt; 4'})<br>• KESIMPULAN: ${aman?'STRUKTUR GRADASI FILTER AMAN':'FILTER GAGAL, WAJIB REDESIGN!'}`;
             res.classList.remove('hidden');
         }
 
@@ -495,7 +501,8 @@
             initDraggablePanel(document.getElementById('draggableHelpPanel'), document.getElementById('helpDragHandle'));
         });
         function initDraggablePanel(p, h) {
-            if (!p || !h) return; let p1=0, p2=0, p3=0, p4=0; h.onmousedown = (e) => { e.preventDefault(); p3=e.clientX; p4=e.clientY; document.onmouseup = () => { document.onmouseup=null; document.onmousemove=null; }; document.onmousemove = (ev) => { ev.preventDefault(); p1=p3-ev.clientX; p2=p4-ev.clientY; p3=ev.clientX; p4=ev.clientY; p.style.top=(p.offsetTop-p2)+"px"; p.style.left=(p.offsetLeft-p1)+"px"; p.style.transform='none'; }; };
+            if (!p || !h || window.innerWidth < 640) return; // Nonaktifkan drag pada HP agar tidak merusak scroll alami
+            let p1=0, p2=0, p3=0, p4=0; h.onmousedown = (e) => { e.preventDefault(); p3=e.clientX; p4=e.clientY; document.onmouseup = () => { document.onmouseup=null; document.onmousemove=null; }; document.onmousemove = (ev) => { ev.preventDefault(); p1=p3-ev.clientX; p2=p4-ev.clientY; p3=ev.clientX; p4=ev.clientY; p.style.top=(p.offsetTop-p2)+"px"; p.style.left=(p.offsetLeft-p1)+"px"; p.style.transform='none'; }; };
         }
     </script>
 </body>
